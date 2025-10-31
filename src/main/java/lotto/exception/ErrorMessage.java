@@ -12,6 +12,11 @@ public enum ErrorMessage {
     WINNING_NUMBERS_INVALID_COUNT("당첨 번호는 6개여야 합니다."),
     WINNING_NUMBERS_INVALID_RANGE("당첨 번호는 1부터 45 사이의 숫자여야 합니다."),
     WINNING_NUMBERS_DUPLICATE("당첨 번호는 중복될 수 없습니다."),
+
+    BONUS_NUMBER_NULL_OR_EMPTY("보너스 번호 값이 비어있습니다."),
+    BONUS_NUMBER_NOT_NUMBER("보너스 번호는 유효한 숫자 형식이어야 합니다."),
+    BONUS_NUMBER_INVALID_RANGE("보너스 번호는 1부터 45 사이의 숫자여야 합니다."),
+    BONUS_NUMBER_DUPLICATE("보너스 번호는 당첨 번호와 중복될 수 없습니다."),
     ;
 
     private final String ERROR_PREFIX = "[ERROR] ";
