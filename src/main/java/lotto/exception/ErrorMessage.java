@@ -6,6 +6,12 @@ public enum ErrorMessage {
     PURCHASE_OUT_OF_RANGE("구입 금액이 유효한 범위를 벗어났습니다."),
     PURCHASE_NOT_POSITIVE("구입 금액이 양수가 아닙니다."),
     PURCHASE_NOT_UNIT("구입 금액이 1,000원 단위로 나누어 떨어지지 않습니다."),
+
+    WINNING_NUMBERS_NULL_OR_EMPTY("당첨 번호 값이 비어있습니다."),
+    WINNING_NUMBERS_NOT_NUMBER("당첨 번호는 유효한 숫자 형식이어야 합니다."),
+    WINNING_NUMBERS_INVALID_COUNT("당첨 번호는 6개여야 합니다."),
+    WINNING_NUMBERS_INVALID_RANGE("당첨 번호는 1부터 45 사이의 숫자여야 합니다."),
+    WINNING_NUMBERS_DUPLICATE("당첨 번호는 중복될 수 없습니다."),
     ;
 
     private final String ERROR_PREFIX = "[ERROR] ";
