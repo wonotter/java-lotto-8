@@ -97,3 +97,35 @@
   ```text
   총 수익률은 62.5%입니다.
   ```
+
+## 예외 처리 목록
+
+> 발생 가능한 예외 상황과 처리 방법을 정리하였습니다.
+
+### 0. 예외 처리 공통사항
+
+- [ ] 예외 상황 발생 시 모든 에러 메시지는 `[ERROR]`로 시작하도록 하고, 예외가 발생한 지점부터 다시 입력받는다.
+
+### 1. 입력 값 예외
+
+- [ ] 빈 문자열이나 null을 입력받을 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 당첨번호를 `쉼표(,)` 기준으로 입력받지 않는 경우 `IllegalArgumentException`을 발생시킨다.
+
+### 2. 구입 금액 예외
+
+- [ ] 로또 구입 금액이 `1,000원` 단위로 나누어 떨어지지 않는 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 로또 구입 금액이 int 범위를 벗어나거나 유효한 숫자 형식이 아닌 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 로또 구입 금액이 0보다 작은 경우 `IllegalArgumentException`을 발생시킨다.
+
+### 3. 당첨 번호 예외
+
+- [ ] 당첨 번호 숫자 범위인 `1~45`를 벗어나는 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 당첨 번호 숫자가 서로 중복되는 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 당첨 번호가 int 범위를 벗어나거나 유효한 숫자 형식이 아닌 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 당첨 번호 개수가 6개가 아닌 경우 `IllegalArgumentException`을 발생시킨다.
+
+### 4. 보너스 번호 예외
+
+- [ ] 보너스 번호 숫자 범위인 `1~45`를 벗어나는 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 보너스 번호와 당첨 번호가 서로 중복되는 경우 `IllegalArgumentException`을 발생시킨다.
+- [ ] 보너스 번호가 int 범위를 벗어나거나 유효한 숫자 형식이 아닌 경우 `IllegalArgumentException`을 발생시킨다.
