@@ -1,4 +1,7 @@
-package lotto.model;
+package lotto.model.winning;
+
+import lotto.model.LottoRank;
+import lotto.model.ticket.Lotto;
 
 public class WinningLotto {
 
