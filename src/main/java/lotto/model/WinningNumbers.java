@@ -3,6 +3,7 @@ package lotto.model;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lotto.exception.ErrorMessage;
@@ -79,5 +80,24 @@ public class WinningNumbers {
         return (int) otherNumbers.stream()
                 .filter(numbers::contains)
                 .count();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        WinningNumbers that = (WinningNumbers) o;
+        return Objects.equals(numbers, that.numbers);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numbers);
     }
 }
