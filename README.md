@@ -1,5 +1,11 @@
 # 로또
 
+## 실행 흐름도
+
+> 로또 프로그램 실행 흐름을 주요 메서드 레벨로 표현하였습니다.
+
+<img width="4004" height="1100" alt="lotto_diagram" src="https://github.com/user-attachments/assets/c0ceae0f-85be-452a-b18a-410b65a54a21" />
+
 ## 기능 목록
 
 > 구현할 기능 목록을 정리하였습니다.
