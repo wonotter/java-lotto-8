@@ -6,6 +6,28 @@
 
 <img width="4004" height="1100" alt="lotto_diagram" src="https://github.com/user-attachments/assets/c0ceae0f-85be-452a-b18a-410b65a54a21" />
 
+## 각 클래스 별 역할
+
+> 각 클래스 별로 담당하고 있는 역할에 대해 작성하였습니다.
+
+| 클래스명                  | 역할                                                                          |
+|-----------------------|-----------------------------------------------------------------------------|
+| Application           | 애플리케이션의 진입점으로 의존성을 주입하고 컨트롤러를 실행                                            |
+| LottoController       | 입력 → 처리 → 출력의 흐름 관리, 사용자가 잘못 입력 시 재입력할 수 있도록 처리                             |
+| InputView             | 구입금액, 당첨번호, 보너스번호 입력 처리                                                     |
+| OutputView            | 로또 번호, 통계, 수익률 등을 포맷팅하여 출력                                                  |
+| LottoRank             | 1~5등, 낙첨을 표현하고, 상금 정보를 함께 저장<br/>-> 일치 개수와 보너스 여부로 등수 판정                    |
+| LottoStatistics       | 각 등수별 당첨 개수 집계 및 수익률 계산                                                     |
+| Lotto                 | 개별 로또 티켓을 표현하며, 6개 번호를 저장                                                   |
+| LottoTickets          | 여러 개의 `Lotto` 클래스를 관리하는 일급 컬렉션                                              |
+| PurchaseAmount	       | 구입 금액을 표현하는 VO 객체이며, 금액 유효성 검증 및 티켓 개수 계산                                   |
+| WinningNumbers        | 당첨 번호 6개를 표현하는 VO 객체이며, 입력 파싱 및 유효성 검증, 일치 개수 계산                            |
+| BonusNumber           | 보너스 번호를 표현하는 VO 객체이며, 당첨 번호와 중복 방지 검증                                       |
+| WinningLotto          | 당첨 정보인 `WinningNumbers`, `BonusNumber`를 묶어서 관리하는 객체 <br/> -> 티켓과 비교하여 등수 판정 |
+| LottoGenerator        | 로또 번호 생성 전략을 정의한 인터페이스                                                      |
+| DefaultLottoGenerator | 랜덤 로또 번호 생성 기본 구현체. 1~45 중 6개 무작위 선택                                        |
+| ErrorMessage          | 에러 메시지를 중앙에서 관리하는 클래스                                                       |
+
 ## 기능 목록
 
 > 구현할 기능 목록을 정리하였습니다.
