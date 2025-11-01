@@ -48,16 +48,6 @@ public class Lotto {
         }
     }
 
-    public int countMatches(List<Integer> winningNumbers) {
-        return (int) numbers.stream()
-                .filter(winningNumbers::contains)
-                .count();
-    }
-
-    public boolean contains(int number) {
-        return numbers.contains(number);
-    }
-
     public List<Integer> getNumbers() {
         return numbers;
     }

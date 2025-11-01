@@ -1,5 +1,6 @@
 package lotto.model.winning;
 
+import java.util.List;
 import java.util.Objects;
 import lotto.exception.ErrorMessage;
 
@@ -43,6 +44,11 @@ public class BonusNumber {
         if (winningNumbers.contains(parsedNumber)) {
             throw new IllegalArgumentException(ErrorMessage.BONUS_NUMBER_DUPLICATE.getMessage());
         }
+    }
+
+    // 보너스 번호 일치 여부 판별 메서드
+    public boolean matches(List<Integer> lottoNumbers) {
+        return lottoNumbers.contains(number);
     }
 
     public int getNumber() {
