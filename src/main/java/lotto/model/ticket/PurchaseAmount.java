@@ -10,11 +10,18 @@ public class PurchaseAmount {
     private final int amount;
 
     public PurchaseAmount(String input) {
+        validateNotNullOrEmpty(input);
         int parsedAmount = parseAmount(input);
         validatePositive(parsedAmount);
         validateUnit(parsedAmount);
 
         this.amount = parsedAmount;
+    }
+
+    private void validateNotNullOrEmpty(String input) {
+        if (input == null || input.trim().isEmpty()) {
+            throw new IllegalArgumentException(ErrorMessage.PURCHASE_NULL_OR_EMPTY.getMessage());
+        }
     }
 
     private int parseAmount(String input) {

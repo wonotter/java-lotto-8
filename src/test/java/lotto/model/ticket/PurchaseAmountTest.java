@@ -57,9 +57,17 @@ class PurchaseAmountTest {
     @DisplayName("예외 발생 테스트")
     class 예외_발생_테스트 {
 
+        @Test
+        @DisplayName("빈 문자열 입력 시 예외가 발생한다")
+        void 빈_문자열_입력_시_예외가_발생한다() {
+            assertThatThrownBy(() -> new PurchaseAmount(""))
+                    .isInstanceOf(IllegalArgumentException.class)
+                    .hasMessageContaining(ErrorMessage.PURCHASE_NULL_OR_EMPTY.getMessage());
+        }
+
         @DisplayName("숫자가 아닌 문자열을 입력하면 예외가 발생한다")
         @ParameterizedTest
-        @ValueSource(strings = {"abc", "12.34", "1000원", ""})
+        @ValueSource(strings = {"abc", "12.34", "1000원"})
         void 숫자가_아닌_문자열을_입력하면_예외가_발생한다(String input) {
             assertThatThrownBy(() -> new PurchaseAmount(input))
                     .isInstanceOf(IllegalArgumentException.class)

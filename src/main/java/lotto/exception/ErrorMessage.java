@@ -2,6 +2,7 @@ package lotto.exception;
 
 public enum ErrorMessage {
 
+    PURCHASE_NULL_OR_EMPTY("구입 금액 값이 비어있습니다."),
     PURCHASE_NOT_NUMBER("구입 금액은 유효한 숫자 형식이어야 합니다."),
     PURCHASE_OUT_OF_RANGE("구입 금액이 유효한 범위를 벗어났습니다."),
     PURCHASE_NOT_POSITIVE("구입 금액이 양수가 아닙니다."),
